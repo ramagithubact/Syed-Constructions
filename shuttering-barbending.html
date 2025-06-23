@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shuttering & Barbending - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+ <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+
+  <header>
+    <h1>Shuttering & Barbending Work</h1>
+    <p>Accurate Formwork and Reinforcement Execution for Safe RCC Construction</p>
+  </header>
+
+     <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Shuttering and barbending are critical components of reinforced concrete (RCC) work. At Syed Constructions, we ensure high-precision shuttering and steel bar fabrication to create strong structural elements like beams, columns, slabs, and footings. Our experienced team ensures dimensional accuracy and compliance with structural design.</p>
+    </section>
+
+    <section>
+      <h2>Scope of Work</h2>
+
+      <h3>1. Shuttering/Formwork</h3>
+      <p>We use adjustable MS shuttering, plywood form panels, and centering props for formwork setup. Supports are securely tied and leveled for safe concrete casting. We apply shutter oil to prevent sticking and ensure a smooth finish.</p>
+
+      <h3>2. Barbending</h3>
+      <p>Reinforcement bars (TMT rods) are cut, bent, and tied as per bar bending schedules (BBS). We follow specified diameters, hooks, lap lengths, and clear covers per IS codes. Binding is done using annealed wire with proper spacing and overlap.</p>
+
+      <h3>3. Formwork for RCC Elements</h3>
+      <p>Our team installs formwork for:</p>
+      <ul>
+        <li>Footings (Isolated, Combined)</li>
+        <li>Columns and Pedestals</li>
+        <li>Beams and Slabs</li>
+        <li>Staircases and Retaining Walls</li>
+      </ul>
+
+      <h3>4. Steel Reinforcement Detailing</h3>
+      <p>We verify bar layouts with structural drawings before fixing. Chairs, cover blocks, and spacers are placed to maintain position and strength. Bars are tied using standard binding methods with site-engineer supervision.</p>
+
+      <h3>5. Safety and Inspection</h3>
+      <p>All shuttering and bar bending works undergo inspection for alignment, cover, cleanliness, and stability. Adequate safety measures like scaffolding, PPE kits, and temporary guardrails are in place throughout the work duration.</p>
+    </section>
+
+    <section>
+      <h2>Tools & Crew</h2>
+      <p>We employ shuttering carpenters, barbenders, steel fixers, and helpers equipped with bending tools, tying wires, clamps, measuring tapes, and safety gear. Our works are supervised by experienced foremen and engineers.</p>
+    </section>
+
+    <section>
+      <h2>Recent Projects</h2>
+      <ul>
+        <li>Shuttering & Barbending – Govt. School Building – Madakasira (2023)</li>
+        <li>RCC Column and Slab Forming – Marriage Hall – Penukonda (2022)</li>
+        <li>Industrial Shed RCC Base – Hindupur Town (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/shuttering.jpg" alt="Shuttering Work 1" />
+        <img src="images/Barbending work.jpg" alt="Barbending Work 1" />
+        <img src="images/shuttering2.jpg" alt="Shuttering Work 2" />
+      </div>
+    </section>
+
+    
+  </main>
+
+    
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

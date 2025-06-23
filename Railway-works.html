@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Railway Works - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+  <header>
+    <h1>Railway Infrastructure Works</h1>
+    <p>Comprehensive Services for Railway Track Construction and Development</p>
+  </header>
+
+    <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Syed Constructions specializes in executing large-scale railway projects, adhering to the highest safety and quality standards defined by Indian Railways and other governing bodies. Our scope includes formation, subgrade preparation, ballast laying, track alignment, and maintenance services.</p>
+    </section>
+
+    <section>
+      <h2>Step-by-Step Railway Track Construction</h2>
+
+      <h3>1. Survey and Site Clearance</h3>
+      <p>We begin with a detailed route survey using GPS and total station instruments. Once the alignment is finalized, the land is cleared of vegetation, debris, and obstructions, ensuring a clean slate for formation work.</p>
+
+      <h3>2. Earthwork and Formation</h3>
+      <p>This includes cutting, filling, and compaction using rollers and graders. Proper slopes, side drains, and embankments are constructed with quality soil to achieve the required formation level.</p>
+
+      <h3>3. Subgrade Preparation</h3>
+      <p>The subgrade is compacted and leveled to support the ballast and sleepers. Geotextile membranes or blanket layers are laid if required for additional strength and drainage.</p>
+
+      <h3>4. Ballast Laying</h3>
+      <p>Crushed stone ballast (typically 50mm size) is evenly distributed using mechanical or manual means. Vibratory compaction ensures a firm layer, essential for track stability and drainage.</p>
+
+      <h3>5. Sleepers Placement</h3>
+      <p>We place prestressed concrete sleepers at defined spacing. These sleepers are carefully aligned and leveled to meet track geometry and gauge specifications.</p>
+
+      <h3>6. Rail Laying and Fastening</h3>
+      <p>Long welded rails (LWR) or short rails are positioned and fastened using clips, pads, and bolts. Proper torque and tightening schedules are followed. Rail joints are either thermite welded or fish-plated based on design requirements.</p>
+
+      <h3>7. Final Alignment and Tamping</h3>
+      <p>The track is aligned using precision equipment. Tamping machines or manual labor are used to pack ballast beneath sleepers, ensuring a uniform load distribution.</p>
+
+      <h3>8. Drainage and Side Works</h3>
+      <p>We construct culverts, drains, and embankment protection walls. These are critical for maintaining the integrity of the railway structure over time.</p>
+
+      <h3>9. Safety Signage and Finishing</h3>
+      <p>We install boundary posts, kilometer stones, signaling cable trays, and necessary markers. The site is cleaned and handed over for inspection and commissioning.</p>
+    </section>
+
+    <section>
+      <h2>Machinery and Team</h2>
+      <p>We deploy excavators, dumpers, rollers, vibratory compactors, graders, ballast regulators, and tamping machines along with a trained workforce including civil engineers, supervisors, safety officers, and skilled laborers.</p>
+    </section>
+
+    <section>
+      <h2>Past Projects</h2>
+      <ul>
+        <li>New track laying – 12 km – Kadapa Division (2022)</li>
+        <li>Ballast replacement – 6 km – Guntakal Division (2021)</li>
+        <li>Track strengthening works with geo-fabric – 4 km – Anantapur Region (2020)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/railway1.jpg" alt="Railway Work 1" />
+        <img src="images/railway2.jpg" alt="Railway Work 2" />
+        <img src="images/railway3.jpg" alt="Railway Work 3" />
+      </div>
+    </section>
+
+   
+  </main>
+  
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+ <script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+</script>
+
+</body>
+</html>

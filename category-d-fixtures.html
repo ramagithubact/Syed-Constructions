@@ -1,0 +1,111 @@
+<!--Category D – Fixtures-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category D – Fixtures Work - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+
+  <header>
+    <h1>Category D – Fixtures Work</h1>
+    <p>Expert Installation of Doors, Windows, Grills, and Custom Metal Fixtures</p>
+  </header>
+
+     <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Fixtures mark the final touch in any construction project. At Syed Constructions, we specialize in installing high-quality doors, windows, ventilation grills, and fabricated metal frames for both security and aesthetics. Each fitting is done with precision to ensure long life, strength, and design harmony.</p>
+    </section>
+
+    <section>
+      <h2>Fixture Services We Offer</h2>
+
+      <h3>1. Door Installation</h3>
+      <p>We fix wooden, flush, laminated, or PVC doors for rooms, bathrooms, and main entrances. Frames are aligned vertically with wedges and plumb lines. Hinges, locks, and handles are installed smoothly.</p>
+
+      <h3>2. Window Fittings</h3>
+      <p>Aluminum, UPVC, and steel windows are fitted with proper alignment, sealing, and movement checks. We use anchor fasteners and silicon seals to prevent air/water leakage.</p>
+
+      <h3>3. Fabricated MS Frames</h3>
+      <p>Fabricated mild steel door and window frames are painted with red oxide and grouted during brickwork or fixed with anchor bolts. They provide strong support and durability in public and industrial buildings.</p>
+
+      <h3>4. Ventilation & Safety Grills</h3>
+      <p>We fix safety grills for windows, balconies, and ventilators using customized steel or GI bars. Aesthetic designs and weld quality are maintained for secure installation.</p>
+
+      <h3>5. Miscellaneous Metal Fixtures</h3>
+      <p>We fabricate and install ramps, railings, steel door shutters, staircase handrails, tank covers, and more as per site demands. All welding, cutting, and installation is handled by trained technicians.</p>
+    </section>
+
+    <section>
+      <h2>Materials & Crew</h2>
+      <p>Materials used include teak wood, plywood, laminated boards, MS square pipes, grills, GI hinges, handles, tower bolts, and red oxide primer. Our fabrication and carpentry teams work under direct supervision of site engineers.</p>
+    </section>
+
+    <section>
+      <h2>Project Highlights</h2>
+      <ul>
+        <li>Steel Door & Grill Installation – Hostel Block – Gooty (2023)</li>
+        <li>UPVC Windows & Frames – Apartment Project – Anantapur (2022)</li>
+        <li>Main Door + Stair Railing – Residential Duplex – Hindupur (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/installation of doors.jpg" alt="Door Installation" />
+        <img src="images/windows.jpg" alt="Windows" />
+        <img src="images/customized metal work images.jpg" alt="Metal Fixtures" />
+      </div>
+    </section>
+
+    
+  </main>
+
+   
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+
+</body>
+</html>

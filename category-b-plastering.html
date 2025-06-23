@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category B – Plastering Work - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+
+  <header>
+    <h1>Category B – Plastering Work</h1>
+    <p>Smooth, Durable Finishing for Interior and Exterior Walls with Waterproofing Solutions</p>
+  </header>
+
+      <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Plastering enhances the aesthetics and protects the structural surfaces from weather and moisture. Syed Constructions provides high-quality internal and external plastering using proven methods and materials that ensure a long-lasting, crack-free, and uniform surface.</p>
+    </section>
+
+    <section>
+      <h2>Plastering Services We Offer</h2>
+
+      <h3>1. Internal Wall Plastering</h3>
+      <p>We use cement mortar (1:5 or 1:6 ratio) to plaster internal walls. Surfaces are cleaned, roughened, and joints raked before plastering. Finished surface is smooth and plumbed accurately for further painting or tiling.</p>
+
+      <h3>2. External Wall Plastering</h3>
+      <p>External walls are plastered with waterproof additives mixed in cement mortar to resist rain and weathering. A double coat may be applied where needed, followed by curing for at least 7–10 days.</p>
+
+      <h3>3. Mesh Joints for Crack Prevention</h3>
+      <p>We install fiberglass mesh or GI mesh at brick and column joints, beam junctions, and conduit crossings to prevent hairline cracks. This reinforcement ensures plaster integrity over time.</p>
+
+      <h3>4. Ceiling Plastering</h3>
+      <p>We plaster ceiling surfaces neatly with proper scaffolding and finishing tools. Vertical and horizontal alignments are carefully maintained.</p>
+
+      <h3>5. Waterproofing in Wet Areas</h3>
+      <p>Bathrooms, terraces, and water tanks are plastered using chemical waterproofing compounds like Dr. Fixit or Fosroc. Slope is provided for proper drainage.</p>
+
+      <h3>6. Surface Finishing</h3>
+      <p>Final finishing includes sponge or float finish based on client preference. All corners, grooves, and arches are finished with precision using PVC beads and trowels.</p>
+    </section>
+
+    <section>
+      <h2>Materials and Crew</h2>
+      <p>We use PPC/OPC cement, sieved sand, mesh rolls, waterproofing chemicals, aluminum levels, and floats. Our masons are trained in proper curing, leveling, and alignment techniques for professional finishing.</p>
+    </section>
+
+    <section>
+      <h2>Sample Projects</h2>
+      <ul>
+        <li>Internal Plastering – School Hostel – Rayadurg (2023)</li>
+        <li>External Plastering with Waterproofing – Staff Quarters – Kadiri (2022)</li>
+        <li>Bathroom & Overhead Tank Waterproof Plaster – Residential Villa – Dharmavaram (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/interior and exterior work.jpeg" alt="Plastering Work 1" />
+        <img src="images/mesh joints.jpg" alt="Mesh Joint" />
+        <img src="images/waterproofing.jpg" alt="Waterproofing Work" />
+      </div>
+    </section>
+
+    
+  </main>
+
+    
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+
+</body>
+</html>

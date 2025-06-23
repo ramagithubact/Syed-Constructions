@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category A – Structural Work - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+  <header>
+    <h1>Category A – Structural Work</h1>
+    <p>Brick Masonry, Slab Concreting, Lintel Casting and RCC Framework</p>
+  </header>
+
+      <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Category A Structural works involve the primary load-bearing components of a building or structure. At Syed Constructions, we focus on robust foundation, precise masonry, lintel beams, and RCC slabs to ensure the strength and stability of every structure we build.</p>
+    </section>
+
+    <section>
+      <h2>Key Structural Activities</h2>
+
+      <h3>1. Brick Masonry</h3>
+      <p>We lay bricks in cement mortar (1:6 or 1:4 ratio) with uniform joints and alignment. We use string lines, spirit levels, and plumb bobs for vertical and horizontal precision. Curing is done daily to achieve optimal strength.</p>
+
+      <h3>2. Slab Concrete Work</h3>
+      <p>We cast RCC slabs using approved mix designs (M20–M25) with reinforcement per structural drawings. Proper formwork, leveling, vibrator compaction, and curing ensure crack-free and level finishes.</p>
+
+      <h3>3. Lintel Casting</h3>
+      <p>Lintels are cast above doors and windows to distribute loads. We install shuttering, reinforcement bars, and cast concrete with proper curing and deshuttering timelines as per site conditions.</p>
+
+      <h3>4. Column & Beam Framework</h3>
+      <p>Columns and beams are critical for RCC framing. We ensure bar fixing, shuttering, verticality checks, and pour sequencing. Concrete is vibrated thoroughly and cured continuously for 7–14 days.</p>
+
+      <h3>5. Curing and Quality Checks</h3>
+      <p>Curing is done through ponding, wet cloth, or chemical sprays. Cube samples are taken for compression testing. Verticality, plumb, and level checks are performed by site engineers before proceeding to the next phase.</p>
+    </section>
+
+    <section>
+      <h2>Tools & Team</h2>
+      <p>We use concrete mixers, vibrators, water pumps, scaffolding systems, and steel measuring tapes. Our experienced masons, supervisors, and RCC workers follow IS codes and engineer instructions strictly.</p>
+    </section>
+
+    <section>
+      <h2>Completed Projects</h2>
+      <ul>
+        <li>Slab & Beam Structure – Government Quarters – Anantapur (2023)</li>
+        <li>Brickwork & Lintel Work – Apartment Block – Dharmavaram (2022)</li>
+        <li>Full RCC Shell – Individual Home – Kalyandurg (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/brick work.jpg" alt="Brick Work" />
+        <img src="images/slab concrete work.jpg" alt="Slab Concrete" />
+        <img src="images/Lintal work.jpg" alt="Lintel Work" />
+      </div>
+    </section>
+
+   
+  </main>
+
+   
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Highway Works - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+   <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+  <header>
+    <h1>Highway Construction Works</h1>
+    <p>Building Durable Roads with Advanced Engineering and Proven Methods</p>
+  </header>
+    <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Syed Constructions undertakes a wide range of highway and road construction projects including BT (Bituminous Tar), Cement Concrete Roads, and Interlocking Paver Block Roads. We execute contracts for government departments, public infrastructure bodies, and private developers with a commitment to quality, safety, and long-term durability.</p>
+    </section>
+
+    <section>
+      <h2>Highway Construction Workflow</h2>
+
+      <h3>1. Survey and Road Design</h3>
+      <p>We begin with contour surveys, digital elevation mapping, and soil investigation. Road design includes pavement thickness, grade, and curvature calculations based on IRC (Indian Roads Congress) standards.</p>
+
+      <h3>2. Earthwork and Subgrade Preparation</h3>
+      <p>We excavate, fill, and compact the roadbed using heavy machinery. Subgrade is prepared with granular layers, ensuring uniformity and proper moisture control for maximum load-bearing.</p>
+
+      <h3>3. WBM/WMM Base Layer</h3>
+      <p>Water Bound Macadam (WBM) or Wet Mix Macadam (WMM) is laid, rolled, and compacted to act as a strong base before applying bituminous or concrete layers.</p>
+
+      <h3>4. Bituminous Road (BT)</h3>
+      <p>We apply bituminous layers such as Prime Coat, Tack Coat, DBM (Dense Bituminous Macadam), and BC (Bituminous Concrete). Proper temperature, rolling, and thickness control are maintained for smooth, durable surfaces.</p>
+
+      <h3>5. Cement Concrete Road</h3>
+      <p>In areas with heavy traffic or waterlogging, we build CC roads using M30–M40 grade concrete. Expansion joints and dowel bars are provided to avoid cracking. Surface is floated and broomed for texture.</p>
+
+      <h3>6. Paver Block Roads</h3>
+      <p>Used in colonies, footpaths, and intersections. We lay 60–80 mm thick concrete blocks over a sand bed with proper edge restraint. Blocks are compacted using vibratory plate compactors.</p>
+
+      <h3>7. Side Drains, Markings & Finishing</h3>
+      <p>We build covered and open drains, paint lane lines, install road studs and signage as per IRC guidelines. Final inspection ensures gradient, drainage, and smoothness parameters are met.</p>
+    </section>
+
+    <section>
+      <h2>Machinery & Manpower</h2>
+      <p>Our highway division uses pavers, JCBs, graders, tippers, rollers, bitumen distributors, concrete mixers, and curing tools. A dedicated team of engineers, supervisors, lab technicians, and road safety officers oversee operations.</p>
+    </section>
+
+    <section>
+      <h2>Notable Projects</h2>
+      <ul>
+        <li>BT Road – 5 km stretch – Pulivendula – R&B Dept. (2022)</li>
+        <li>CC Road – 1.2 km – Dharmavaram Municipality (2021)</li>
+        <li>Interlocking Block Pavement – Bus Stand Area – Penukonda (2020)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/highway1.jpeg" alt="Highway Construction 1" />
+        <img src="images/highway2d.jpeg" alt="Highway Construction 2" />
+        <img src="images/highway3.jpeg" alt="Highway Construction 3" />
+      </div>
+    </section>
+
+   
+  </main>
+
+    
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+
+</body>
+</html>

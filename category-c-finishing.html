@@ -1,0 +1,112 @@
+<!--Category C – Finishing-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Category C – Finishing Work - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+<div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+
+  <header>
+    <h1>Category C – Finishing Work</h1>
+    <p>Complete Tiling, Electrical, Plumbing, and Interior Works for Elegant Living Spaces</p>
+  </header>
+
+      <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Finishing work gives life and livability to buildings. Syed Constructions provides end-to-end finishing services including tile work, sanitary fittings, electrical installations, and interior design implementation. Our focus is on detail, quality, and elegance that reflects your style and ensures comfort.</p>
+    </section>
+
+    <section>
+      <h2>Finishing Services Offered</h2>
+
+      <h3>1. Floor and Wall Tiling</h3>
+      <p>We lay vitrified, ceramic, granite, and anti-skid tiles using precision levelling and spacers. Adhesives or cement mortar are chosen based on application (indoor/outdoor/wet areas).</p>
+
+      <h3>2. Electrical Works</h3>
+      <p>Our licensed electricians handle conduit wiring, switchboards, DB installation, lighting, fan and AC points. We follow IS standards and safety measures for reliable and future-ready wiring.</p>
+
+      <h3>3. Plumbing Works</h3>
+      <p>Complete plumbing system – from underground drainage, water lines to fitting installation – is done with CPVC, UPVC, or GI pipes. All fittings are pressure-tested and leak-proof.</p>
+
+      <h3>4. Painting and Polishing</h3>
+      <p>We prepare walls with putty, apply primers, and execute painting with rollers and brushes. Enamel, emulsion, or textured finishes are applied based on client choice. Woodwork polishing adds richness to doors and furniture.</p>
+
+      <h3>5. Modular and Interior Works</h3>
+      <p>We install modular kitchens, wardrobes, TV units, ceiling panels, and partitions using MDF/plywood/laminate combos. We also provide false ceiling and LED cove lighting works for luxurious interiors.</p>
+    </section>
+
+    <section>
+      <h2>Team and Tools</h2>
+      <p>Our finishing crew includes tile layers, painters, electricians, plumbers, carpenters, and interior decorators. We use laser levels, tile cutters, wall sanders, and branded tools for consistent finish quality.</p>
+    </section>
+
+    <section>
+      <h2>Completed Finishing Projects</h2>
+      <ul>
+        <li>Tile & Electrical Finish – Apartment Block – Hindupur (2023)</li>
+        <li>Modular Wardrobe and False Ceiling – Individual Villa – Puttaparthi (2022)</li>
+        <li>Full Interior Fit-Out – Office Space – Anantapur (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/tile work.jpg" alt="Tile Work" />
+        <img src="images/electrical work.jpg" alt="Electrical Work" />
+        <img src="images/plumbing work images.jpg" alt="Plumbing Work" />
+        <img src="images/interior design.jpg" alt="Interior Design" />
+      </div>
+    </section>
+
+   
+  </main>
+
+    
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Earthwork - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+ <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+
+  <header>
+    <h1>Earthwork Services</h1>
+    <p>Expert Groundwork Preparation for Infrastructure and Construction Projects</p>
+  </header>
+
+      <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Earthwork is the foundation of any civil engineering project. At Syed Constructions, we provide comprehensive excavation and land development services for residential, commercial, and public sector projects. Our focus is on achieving precise levels, slope control, and stable soil preparation.</p>
+    </section>
+
+    <section>
+      <h2>Scope of Work</h2>
+
+      <h3>1. Site Clearance</h3>
+      <p>Removal of vegetation, debris, and structures from the site. Topsoil is stripped and preserved if needed for landscaping or reuse.</p>
+
+      <h3>2. Excavation and Cutting</h3>
+      <p>We carry out mechanical and manual excavation for foundations, basements, trenches, and drains. Soil is removed as per drawings and disposed of safely or reused on-site.</p>
+
+      <h3>3. Filling and Backfilling</h3>
+      <p>Filling material is placed in layers and compacted using rollers or rammers. Earth, gravel, moorum, or sand is used based on specifications. Backfilling is done around foundations, walls, and trenches.</p>
+
+      <h3>4. Leveling and Grading</h3>
+      <p>We grade plots, roads, and embankments to achieve the desired slope and elevation. Laser leveling and dozers ensure accuracy for roadbeds, drainage systems, and platforms.</p>
+
+      <h3>5. Compaction</h3>
+      <p>Proper compaction improves soil bearing capacity. Watering and rolling are done using tandem rollers or plate compactors depending on soil type and project size.</p>
+
+      <h3>6. Trench Work</h3>
+      <p>Trenching for utility lines (sewer, water, electrical) is done safely with trench boxes and protective equipment. We follow depth-to-width ratio norms and bedding layer procedures.</p>
+
+      <h3>7. Disposal and Earth Balancing</h3>
+      <p>We handle transport of excess excavated soil and bring in borrow earth if needed. Cut and fill operations are balanced to optimize cost and environmental impact.</p>
+    </section>
+
+    <section>
+      <h2>Equipment & Workforce</h2>
+      <p>We deploy excavators, bulldozers, dumpers, water tankers, vibratory rollers, and hand tools operated by trained site engineers, operators, and helpers. Safety and site cleanliness are our top priorities.</p>
+    </section>
+
+    <section>
+      <h2>Recent Earthwork Projects</h2>
+      <ul>
+        <li>Housing Layout Grading – Dharmavaram Town (2023)</li>
+        <li>Drainage Trenching and Backfill – School Campus, Hindupur (2022)</li>
+        <li>Plot Leveling and Compaction – Kadiri Industrial Estate (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/earth.jpg" alt="Earthwork 1" />
+        <img src="images/earth2.jpg" alt="Earthwork 2" />
+        <img src="images/earth3.jpg" alt="Earthwork 3" />
+      </div>
+    </section>
+
+    
+  </main>
+
+   
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+
+  <script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+</body>
+</html>

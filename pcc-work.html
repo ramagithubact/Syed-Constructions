@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PCC Work - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+ <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+
+  <header>
+    <h1>PCC Work (Plain Cement Concrete)</h1>
+    <p>Strong, Durable Foundations and Floor Bases with Quality Concrete Mixes</p>
+  </header>
+
+      <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Plain Cement Concrete (PCC) is an essential stage of construction that provides a clean, level surface and strong base for further structural elements like footings, slabs, and flooring. At Syed Constructions, we deliver precision PCC work tailored to design specs, ensuring long-term durability and structural integrity.</p>
+    </section>
+
+    <section>
+      <h2>PCC Work Execution Process</h2>
+
+      <h3>1. Site Preparation</h3>
+      <p>Area is cleaned, leveled, and moistened. Formwork is set up with accurate dimensions and alignment. Antitermite treatment may be applied as needed.</p>
+
+      <h3>2. Mixing and Ratio Control</h3>
+      <p>Concrete is mixed in proper proportions (1:3:6 or 1:4:8 – cement:sand:aggregate) as per project specification. We use mechanical mixers and batch measurement for uniformity.</p>
+
+      <h3>3. Pouring and Leveling</h3>
+      <p>Fresh concrete is poured inside shuttered panels and spread evenly. Wooden/metal screeds are used to achieve a level surface and specified thickness (commonly 100–150 mm).</p>
+
+      <h3>4. Compaction</h3>
+      <p>Concrete is compacted manually or using plate vibrators to eliminate air gaps and improve density. Attention is given to corners and joints to avoid honeycombing.</p>
+
+      <h3>5. Curing</h3>
+      <p>We cure the surface with water for a minimum of 7 days using ponding or wet hessian cloths. Proper curing is key to avoid shrinkage cracks and to gain full strength.</p>
+
+      <h3>6. Applications</h3>
+      <p>PCC is used under footings, columns, flooring slabs, external paving, compound walls, and drainage channels. It ensures a clean work base and controls soil moisture below RCC structures.</p>
+    </section>
+
+    <section>
+      <h2>Materials & Manpower</h2>
+      <p>We use quality cement (53 grade), screened river sand, machine-crushed blue metal, and potable water. Our skilled laborers follow instructions from site supervisors and engineers to execute clean and accurate PCC layers.</p>
+    </section>
+
+    <section>
+      <h2>Recent PCC Projects</h2>
+      <ul>
+        <li>PCC Flooring – Rural Health Center – Kalyandurg (2023)</li>
+        <li>Foundation PCC – School Building – Bukkapatnam (2022)</li>
+        <li>Compound Wall Base PCC – Residential Villa – Hindupur (2021)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/pcc1.jpg" alt="PCC Work 1" />
+        <img src="images/pcc2.jpg" alt="PCC Work 2" />
+        <img src="images/pcc3.jpg" alt="PCC Work 3" />
+      </div>
+    </section>
+
+    
+  </main>
+
+   
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+
+</body>
+</html>

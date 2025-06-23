@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bridge Projects - Syed Constructions</title>
+  <link rel="stylesheet" href="styles.css" />
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+   <div id="branding-header-container"></div>
+
+<script>
+  fetch("branding-header.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("branding-header-container").innerHTML = data;
+    });
+</script>
+  <header>
+    <h1>Bridge Projects</h1>
+    <p>Design and Execution of Durable RCC, Steel, and Culvert Structures</p>
+  </header>
+
+ <!-- 🧭 Load the reusable navigation here -->
+  <div id="navbar-container"></div>
+
+  <main class="content">
+    <section>
+      <h2>Overview</h2>
+      <p>Syed Constructions undertakes various types of bridge projects including culverts, RCC slab bridges, steel girder bridges, and pedestrian crossings. We work closely with government departments and engineering consultants to deliver structurally sound, weather-resistant, and long-lasting bridge infrastructure.</p>
+    </section>
+
+    <section>
+      <h2>Bridge Construction Process</h2>
+
+      <h3>1. Survey and Design Coordination</h3>
+      <p>We conduct hydrological studies, site feasibility checks, and alignment planning. Our structural engineers coordinate with design consultants to finalize drawings and BOQs as per IRC/IS codes.</p>
+
+      <h3>2. Foundation and Substructure</h3>
+      <p>We begin with excavation and laying of foundations — open or pile type depending on soil condition. We cast abutments and piers using RCC with waterproofing additives and shuttering for shape precision.</p>
+
+      <h3>3. Superstructure: Deck and Slabs</h3>
+      <p>Deck slabs are cast using high-grade concrete (M30+), with reinforcement per design. Expansion joints and bearing pads are placed to manage load distribution and temperature expansion.</p>
+
+      <h3>4. Steel Girder Installation (if applicable)</h3>
+      <p>Pre-fabricated steel girders are placed using cranes or launching methods. Connections are bolted/welded securely and load-tested before slab casting.</p>
+
+      <h3>5. Approach Roads and Drainage</h3>
+      <p>We construct properly graded approach roads on either side with guard walls, side drains, and retaining structures to ensure water flow and vehicle transition.</p>
+
+      <h3>6. Finishing and Safety Works</h3>
+      <p>Includes railing, painting, road markings, signage, and crash barriers. Drain spouts and scuppers are installed for deck drainage. Final QC inspection is conducted with department engineers.</p>
+    </section>
+
+    <section>
+      <h2>Machinery & Skilled Team</h2>
+      <p>Our bridge projects utilize cranes, batching plants, formwork systems, vibrators, scaffolding, and tower lights. Our crew includes bridge engineers, safety managers, welders, and shuttering carpenters.</p>
+    </section>
+
+    <section>
+      <h2>Executed Projects</h2>
+      <ul>
+        <li>RCC Minor Bridge – Over Canal – Hindupur (2022)</li>
+        <li>Steel Girder Culvert – NH Road Extension – Kadiri (2021)</li>
+        <li>Box Culvert – Irrigation Channel – Tadipatri Rural Area (2020)</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <img src="images/bridge.jpg" alt="Bridge Work 1" />
+        <img src="images/bridge2.jpg" alt="Bridge Work 2" />
+        <img src="images/bridge3.jpg" alt="Bridge Work 3" />
+      </div>
+    </section>
+
+   
+  </main>
+
+    
+  <!--footer-->
+
+    <div id="footer-container"></div>
+	
+<script>
+  fetch("navbar.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("navbar-container").innerHTML = data;
+      const current = location.pathname.split('/').pop();
+      document.querySelectorAll('#navbar-container a').forEach(link => {
+        if (link.getAttribute('href') === current) {
+          link.classList.add('active');
+          const btn = link.closest('.dropdown')?.querySelector('.dropbtn');
+          if (btn) btn.classList.add('active');
+        }
+      });
+    });
+	
+	 // Load footer.html
+  fetch("footer.html")
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById("footer-container").innerHTML = data;
+    });
+	
+</script>
+
+</body>
+</html>
